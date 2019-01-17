@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
@@ -14,16 +16,16 @@
     </header>
 
     <form>
-        Apor <input type="number" name="apor">
+        <h2>Apor</h2> <input type="number" name="apor">
         <br>
         <br>
-        Giraffer <input type="number" name="giraffer">
+        <h2>Giraffer</h2> <input type="number" name="giraffer">
         <br>
         <br>
-        Tigrar <input type="number" name="tigrar">
+        <h2>Tigrar</h2> <input type="number" name="tigrar">
         <br>
         <br>
-        Kokosnötter <input type="number" name="kokos">
+        <h2>Kokosnötter</h2> <input type="number" name="kokos">
         <br>
         <br>
         <input type=button value="Hur många vill du ha?">
