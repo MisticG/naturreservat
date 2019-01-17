@@ -15,7 +15,7 @@
         <h1>Naturreservat</h1>
     </header>
 
-    <form>
+    <form action="results.php" method="post">
         <h2>Apor</h2> <input type="number" name="apor">
         <br>
         <br>
@@ -28,7 +28,7 @@
         <h2>Kokosnötter</h2> <input type="number" name="kokos">
         <br>
         <br>
-        <input type=button value="Hur många vill du ha?">
+        <input type=submit value="Hur många vill du ha?" name="antal" class="btn btn-light">
     </form>
     
 
