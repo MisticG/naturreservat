@@ -1,5 +1,7 @@
 body {
     background-image: url(images/frog.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     margin-left: 5em;
     margin-top: 5em;
     color: whitesmoke;
