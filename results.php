@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.php" media="screen">
     <title>What animal are you?</title>
 </head>
 <body>
@@ -91,39 +92,12 @@
         }
     }
 
-    
 $animalOne = new apa ("Apa", "OOoooooOO", "<img src='images/apa.jpg' />");
-$animalTwo = new giraff ("Giraff", "oui oui", "<img src='images/giraff.jpg'/>");
+$animalTwo = new giraff ("Giraff", "OUIiiii oui", "<img src='images/giraff.jpg'/>");
 $animalThree = new tiger ("Tiger", "RRAAAAAWWWRR", "<img src='images/tiger.jpg' />");
-$fruitOne = new fruit ("Kokosnöt", "DUNK!...aj.", "<img src='images/kokos.jpg' />");
+$fruitOne = new fruit ("Kokosnöt", "DUNK!...aj.", "<img src='images/coconut.jpg' />");
 
-if($setPost = $_POST['apor']) {
-    for($i = 1; $i<=$setPost; $i++) {
-        echo $animalOne->animalImage()[$i];
-    }
-    echo $animalOne->makeSound();
-};
-
-if($setPost = $_POST['giraffer']) {
-    for($i = 1; $i<=$setPost; $i++) {
-        echo $animalTwo->animalImage()[$i];
-    }
-    echo $animalTwo->makeSound();
-};
-
-if($setPost = $_POST['tigrar']) {
-    for($i = 1; $i<=$setPost; $i++) {
-        echo $animalThree->animalImage()[$i];
-    }
-    echo $animalThree->makeSound();
-};
-
-if($setPost = $_POST['kokos']) {
-    for($i = 1; $i<=$setPost; $i++) {
-        echo $fruitOne->fruitImg()[$i];
-    }
-    echo $fruitOne->makeSound();
-};
+require "if.php";
  
 ?>
 
