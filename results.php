@@ -13,91 +13,35 @@
 
 <?php
 
-    abstract class animal {
-        protected $animalType;
-        protected $animalImage;
-        public abstract function makeSound();
+require "classes.php";
 
-        function __construct($animalType, $makeSound, $animalImage) {
-            $this->animalType = $animalType;
-            $this->sound = $makeSound;
-            $this->animalImg = $animalImage;
-        }
+if($setPost = $_POST['apor']) {
+    for($i = 1; $i<=$setPost; $i++) {
+        echo $animalOne->animalImage()[$i] . "<br>";
     }
+    echo $animalOne->makeSound();
+};
 
-    class apa extends animal {
-
-        function animalType() {
-            echo $this->animalType;
-        }
-
-        function makeSound() {
-            echo $this->sound;
-        }
-
-        function animalImage() {
-            echo $this->animalImg;
-        }
+if($setPost = $_POST['giraffer']) {
+    for($i = 1; $i<=$setPost; $i++) {
+        echo $animalTwo->animalImage()[$i] . "<br>";
     }
-        
-    class giraff extends animal {
+    echo $animalTwo->makeSound();
+};
 
-        public function animalType() {
-            echo $this->animalType;
-        }
-
-        function makeSound() {
-            echo $this->sound . "<br>";
-        }
-
-        function animalImage() {
-            echo $this->animalImg . "<br>";
-        }
+if($setPost = $_POST['tigrar']) {
+    for($i = 1; $i<=$setPost; $i++) {
+        echo $animalThree->animalImage()[$i] . "<br>";
     }
+    echo $animalThree->makeSound();
+};
 
-    class tiger extends animal {
-
-        public function animalType() {
-            echo $this->animalType;
-        }
-
-        function makeSound() {
-            echo $this->sound . "<br>";
-        }
-
-        function animalImage() {
-            echo $this->animalImg . "<br>";
-        }
+if($setPost = $_POST['kokos']) {
+    for($i = 1; $i<=$setPost; $i++) {
+        echo $fruitOne->fruitImg()[$i] . "<br>";
     }
-
-    class fruit {
-        private $fruit;
-        private $fruitImg;
-        function __construct($fruit, $fruitImg, $makeSound) {
-            $this->fruit = $fruit;
-            $this->fruitImg = $fruitImg;
-            $this->sound =  $makeSound;
-        }
-
-        function fruit() {
-            echo $this->fruit;
-        }
-
-        function fruitImg() {
-            echo $this->fruitImg;
-        }
-
-        function makeSound() {
-            echo $this->sound;
-        }
-    }
-
-$animalOne = new apa ("Apa", "OOoooooOO", "<img src='images/apa.jpg' />");
-$animalTwo = new giraff ("Giraff", "OUIiiii oui", "<img src='images/giraff.jpg'/>");
-$animalThree = new tiger ("Tiger", "RRAAAAAWWWRR", "<img src='images/tiger.jpg' />");
-$fruitOne = new fruit ("Kokosnöt", "DUNK!...aj.", "<img src='images/coconut.jpg' />");
-
-require "if.php";
+    echo $fruitOne->makeSound();
+};
  
 ?>
 
