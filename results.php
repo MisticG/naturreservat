@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> 
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>What animal are you?</title>
 </head>
 <body>
 
@@ -14,59 +14,88 @@
 
     abstract class animal {
         protected $animalType;
-        abstract function makeSound();
-        abstract function animalImage();
-    }
-
-    class animalApa extends animal {
-        private $name;
-        public $sound;
+        protected $animalImage;
+        public abstract function makeSound();
 
         function __construct($animalType, $makeSound, $animalImage) {
             $this->animalType = $animalType;
             $this->sound = $makeSound;
             $this->animalImg = $animalImage;
         }
+    }
 
-        public function animalType() {
-            return "APA";
+    class apa extends animal {
+
+        function animalType() {
+            echo $this->animalType;
         }
 
         function makeSound() {
-            return "OOOoooOOO" . "<br>";
+            echo $this->sound;
         }
 
         function animalImage() {
-            echo "<img src='images/apa.jpg' />" . "<br>";
+            echo $this->animalImg;
         }
     }
         
-    class animalGiraff extends animal {
-        private $name;
-        public $sound;
-
-        function __construct($animalType, $makeSound, $animalImage) {
-            $this->animalType = $animalType;
-            $this->sound = $makeSound;
-            $this->animalImg = $animalImage;
-        }
+    class giraff extends animal {
 
         public function animalType() {
-            return "GIRAFF";
+            echo $this->animalType;
         }
 
         function makeSound() {
-            return "Oui oui" . "<br>";
+            echo $this->sound . "<br>";
         }
 
         function animalImage() {
-            echo "<img src='images/giraff.jpg'/>" . "<br>";
+            echo $this->animalImg . "<br>";
+        }
+    }
+
+    class tiger extends animal {
+
+        public function animalType() {
+            echo $this->animalType;
+        }
+
+        function makeSound() {
+            echo $this->sound . "<br>";
+        }
+
+        function animalImage() {
+            echo $this->animalImg . "<br>";
+        }
+    }
+
+    class fruit {
+        private $fruit;
+        private $fruitImg;
+        function __construct($fruit, $fruitImg, $makeSound) {
+            $this->fruit = $fruit;
+            $this->fruitImg = $fruitImg;
+            $this->sound =  $makeSound;
+        }
+
+        function fruit() {
+            echo $this->fruit;
+        }
+
+        function fruitImg() {
+            echo $this->fruitImg;
+        }
+
+        function makeSound() {
+            echo $this->sound;
         }
     }
 
     
-$animalOne = new animalApa ("apa", "sound", "image");
-$animalTwo = new animalGiraff ("giraff", "sound", "image");
+$animalOne = new apa ("Apa", "OOoooooOO", "<img src='images/apa.jpg' />");
+$animalTwo = new giraff ("Giraff", "oui oui", "<img src='images/giraff.jpg'/>");
+$animalThree = new tiger ("Tiger", "RRAAAAAWWWRR", "<img src='images/tiger.jpg' />");
+$fruitOne = new fruit ("Kokosnöt", "DUNK!...aj.", "<img src='images/kokos.jpg' />");
 
 if($setPost = $_POST['apor']) {
     for($i = 1; $i<=$setPost; $i++) {
@@ -89,11 +118,11 @@ if($setPost = $_POST['tigrar']) {
     echo $animalThree->makeSound();
 };
 
-if($setPost = $_POST['giraffer']) {
+if($setPost = $_POST['kokos']) {
     for($i = 1; $i<=$setPost; $i++) {
-        echo $animalFour->animalImage()[$i];
+        echo $fruitOne->fruitImg()[$i];
     }
-    echo $animalFour->makeSound();
+    echo $fruitOne->makeSound();
 };
  
 ?>
