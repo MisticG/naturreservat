@@ -6,13 +6,6 @@ abstract class animal {
 
     abstract public function makeSound();
 
-    public function getInfo() 
-    {
-        return (
-            'Info: '.$this->type.', '.$this->image
-        );
-    }
-
     function __construct($type, $image) 
     {
         $this->type = $type;
@@ -104,28 +97,28 @@ if($setPost = $_POST['apor']) {
     for($i = 1; $i<=$setPost; $i++) {
         $image = $animalOne->image;
         ?> <p onclick="clickApe()"><?=$image ?></p> <?php
-        randomName();
+        echo randomName();
     }
 };
 
 if($setPost2 = $_POST['giraffer']) {
-    for($i = 1; $i<=$setPost; $i++) {
+    for($i = 1; $i<=$setPost2; $i++) {
         $image = $animalTwo->image;
         ?> <p onclick="clickGiraff()"><?=$image ?></p> <?php
-        randomName();
+        echo randomName();
     }
 };
 
 if($setPost3 = $_POST['tigrar']) {
-    for($i = 1; $i<=$setPost; $i++) {
+    for($i = 1; $i<=$setPost3; $i++) {
         $image = $animalThree->image;
         ?> <p onclick="clickTiger()"><?=$image ?></p> <?php
-        randomName();
+        echo randomName();
     }
 };
 
 if($setPost4 = $_POST['kokos']) {
-    for($i = 1; $i<=$setPost; $i++) {
+    for($i = 1; $i<=$setPost4; $i++) {
         $image = $fruitOne->fruitImg;
         ?> <p onclick="clickCoco()"><?=$image ?></p> <?php
     }
