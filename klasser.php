@@ -98,28 +98,33 @@ $tigerSound = $animalThree->makeSound();
 $fruitOne = new coconut ("Kokosnöt", "<img src='images/coconut.jpg' />");
 $cocoTaste = $fruitOne->itTastesLike();
 
+require ("rdmnames.php");
+
 if($setPost = $_POST['apor']) {
     for($i = 1; $i<=$setPost; $i++) {
         $image = $animalOne->image;
         ?> <p onclick="clickApe()"><?=$image ?></p> <?php
+        randomName();
     }
 };
 
-if($setPost = $_POST['giraffer']) {
+if($setPost2 = $_POST['giraffer']) {
     for($i = 1; $i<=$setPost; $i++) {
         $image = $animalTwo->image;
         ?> <p onclick="clickGiraff()"><?=$image ?></p> <?php
+        randomName();
     }
 };
 
-if($setPost = $_POST['tigrar']) {
+if($setPost3 = $_POST['tigrar']) {
     for($i = 1; $i<=$setPost; $i++) {
         $image = $animalThree->image;
         ?> <p onclick="clickTiger()"><?=$image ?></p> <?php
+        randomName();
     }
 };
 
-if($setPost = $_POST['kokos']) {
+if($setPost4 = $_POST['kokos']) {
     for($i = 1; $i<=$setPost; $i++) {
         $image = $fruitOne->fruitImg;
         ?> <p onclick="clickCoco()"><?=$image ?></p> <?php
