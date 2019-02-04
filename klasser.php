@@ -97,7 +97,6 @@ if($setPost = $_POST['apor']) {
     for($i = 1; $i<=$setPost; $i++) {
         $image = $animalOne->image;
         ?> <p onclick="clickApe()"><?=$image ?></p> <?php
-        echo randomName();
     }
 };
 
@@ -105,7 +104,6 @@ if($setPost2 = $_POST['giraffer']) {
     for($i = 1; $i<=$setPost2; $i++) {
         $image = $animalTwo->image;
         ?> <p onclick="clickGiraff()"><?=$image ?></p> <?php
-        echo randomName();
     }
 };
 
@@ -113,7 +111,6 @@ if($setPost3 = $_POST['tigrar']) {
     for($i = 1; $i<=$setPost3; $i++) {
         $image = $animalThree->image;
         ?> <p onclick="clickTiger()"><?=$image ?></p> <?php
-        echo randomName();
     }
 };
 
@@ -128,21 +125,25 @@ if($setPost4 = $_POST['kokos']) {
 <script type="text/javascript">
 
 function clickApe() {
-    var apeSound = <?php echo json_encode($apeSound) ?>; 
-    alert(apeSound);
+    var rdmName = <?php echo json_encode(randomName()) ?>;
+    var apeSound = <?php echo json_encode($apeSound) ?>;
+    alert(rdmName + apeSound);
 }
 
 function clickGiraff() {
+    var rdmName = <?php echo json_encode(randomName()) ?>;
     var giraffSound = <?php echo json_encode($giraffSound) ?>;
-    alert(giraffSound);
+    alert(rdmName + giraffSound);
 }
 
 function clickTiger() {
+    var rdmName = <?php echo json_encode(randomName()) ?>;
     var tigerSound = <?php echo json_encode($tigerSound) ?>;
-    alert(tigerSound);
+    alert(rdmName + tigerSound);
 }
 
 function clickCoco() {
+    var rdmName = <?php echo json_encode(randomName()) ?>;
     var cocoTaste = <?php echo json_encode($cocoTaste) ?>;
     alert(cocoTaste);
 }

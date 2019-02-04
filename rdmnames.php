@@ -1,19 +1,19 @@
 <?php 
 
 function randomName() {
-    $addName = array(
-        '0'=>"Anton",
-        '1'=>"Johan",
-        '2'=>"Ranchi",
-        '3'=>"Seb",
-        '4'=>"Rob",
-        '5'=>"David",
-        '6'=>"Samer",
-        '7'=>"Ali",
-        '8'=>"Henric",
-        '9'=>"Alex"
-    );
 
+    $addName = array(
+        '0'=>"Anton säger: ",
+        '1'=>"Johan säger: ",
+        '2'=>"Ranchi säger: ",
+        '3'=>"Seb säger: ",
+        '4'=>"Rob säger: ",
+        '5'=>"David säger: ",
+        '6'=>"Samer säger: ",
+        '7'=>"Ali säger: ",
+        '8'=>"Henric säger: ",
+        '9'=>"Alex säger: "
+    );
 
     $arrIndex = rand(0, 9);
     return $addName[$arrIndex];

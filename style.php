@@ -4,7 +4,6 @@ header("Content-type: text/css");
 ?>
 
 img {
-    display: flex;
-    width: 350px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
